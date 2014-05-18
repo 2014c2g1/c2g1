@@ -645,10 +645,10 @@ if 'OPENSHIFT_REPO_DIR' in os.environ.keys():
     application = cherrypy.Application(root, config = application_conf)
 else:
     # 近端執行啟動
-    '''
-    cherrypy.server.socket_port = 8083
+    
+    cherrypy.server.socket_port = 8085
     cherrypy.server.socket_host = '127.0.0.1'
-    '''
+    
     cherrypy.quickstart(root, config = application_conf)
 
 #@-leo
